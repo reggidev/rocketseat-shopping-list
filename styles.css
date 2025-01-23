@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+
+  /* Font Sizes */
+  --font-size-title: 24px;
+  --font-size-label: 16px;
+  --font-size-paragraph: 16px;
+  --font-size-link: 14px
+
+  /* Line Heights */
+  --line-height-title: 32px;
+  --line-height-label: 20px;
+  --line-height-paragraph: 20px;
+  --line-height-link: 16px;
+
+  /* Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+
+
+  /* Colors */
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFF;
+
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --white: #FFF;
+
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1f2151;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f3279;
+}
+
+.title {
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  font-weight: var(--font-weight-bold);
+}
+
+.label {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-semibold);
+}
+
+.paragraph {
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+  font-weight: var(--font-weight-medium);
+}
+
+.link {
+  font-size: var(--font-size-link);
+  line-height: var(--line-height-link);
+  font-weight: var(--font-weight-medium);
+}
+
+
