@@ -2,6 +2,7 @@
 const inputField = document.querySelector('.add-item-input')
 const addButton = document.querySelector('.add-item-btn')
 const itemList = document.querySelector('.item-list')
+const deleteMessage = document.querySelector('.delete-message')
 
 // Função para criar e adicionar um novo item
 function addItem() {
@@ -63,5 +64,23 @@ addButton.addEventListener("click", addItem)
 inputField.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     addItem()
+  }
+})
+
+// Evento de clique para o botão de exclusão (delegação de eventos)
+itemList.addEventListener("click", (event) => {
+  if (event.target.closest(".delete-item-btn")) {
+    const listItem = event.target.closest("li")
+    if (listItem) {
+      listItem.remove()
+
+      // Exibe a mensagem de exclusão
+      deleteMessage.classList.remove("hidden")
+
+      // Esconde a mensagem novamente após 3 segundos
+      setTimeout(() => {
+        deleteMessage.classList.add("hidden")
+      }, 3000)
+    }
   }
 })

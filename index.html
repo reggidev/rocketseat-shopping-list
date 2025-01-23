@@ -43,25 +43,24 @@
     <section class="max-w-[480px] w-full">
       <h1 class="text-content-primary text-2xl font-bold mb-11">Compras da semana</h1>
 
-      <div class="flex items-center gap-2 mb-10">
+      <div class="flex flex-col sm:flex-row items-center gap-2 mb-10">
         <input
           type="text"
           placeholder="Adicione um novo item"
-          class="add-item-input flex-1 px-3 py-[10px] border-2 rounded-xl border-border-primary bg-white focus:outline-none focus:ring-2 focus:ring-brand"
+          class="add-item-input sm:flex-1 w-full px-3 py-[10px] border-2 rounded-xl border-border-primary bg-white focus:outline-none focus:ring-2 focus:ring-brand"
         />
-        <button class="add-item-btn bg-brand text-white text-base px-6 py-[10px] rounded-xl hover:bg-brand-hover transition-colors duration-300">Adicionar item</button>
+        <button class="add-item-btn w-full sm:w-auto bg-brand text-white text-base px-6 py-[10px] rounded-xl hover:bg-brand-hover transition-colors duration-300">Adicionar item</button>
       </div>
 
       <ul class="item-list space-y-3">
       </ul>
 
       <!-- Item Removido -->
-      <div class="mt-9 p-3 bg-danger text-white rounded-xl flex items-center justify-between gap-2 shadow-md hidden">
+      <div class="delete-message hidden gap-2 mt-9 p-3 bg-danger text-white rounded-xl shadow-md">
         <div class="flex items-center gap-2">
           <img src="/img/warning-circle.svg" alt="Warning Circle">
           <span class="text-base font-medium">O item foi removido da lista</span>
         </div>
-        <button><img src="/img/delete.svg" alt="Delete Icon"></button>
       </div>
 
     </section>
