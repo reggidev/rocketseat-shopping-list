@@ -12,11 +12,96 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css">
-  
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      /* Colors */
+      --color-background-primary: #F4F5FB;
+      --color-background-secondary: #FFF;
+
+      --color-brand: #CA3884;
+      --color-brand-hover: #A52C6B;
+      --color-danger: #C93847;
+
+      --color-content-primary: #080B12;
+      --color-content-secondary: #374151;
+      --color-content-tertiary: #9CA3AF;
+
+      --color-border-primary: #D1D5DB;
+      --color-border-hover: #B9C2D0;
+      }
+  </style>
+
   <title>Shopping List JavaScript</title>
 </head>
 <body>
+  <main class="relative flex flex-col items-center justify-center p-8 h-screen w-full bg-background-primary">
+    <div class="absolute top-5">
+      <img src="/img/logo.png" alt="" >
+    </div>
+
+    <section class="max-w-[480px] w-full">
+      <h1 class="text-content-primary text-2xl font-bold mb-11">Compras da semana</h1>
+
+      <div class="flex items-center gap-2 mb-10">
+        <input
+          type="text"
+          placeholder="Adicione um novo item"
+          class="add-item-input flex-1 px-3 py-[10px] border-2 rounded-xl border-border-primary bg-white focus:outline-none focus:ring-2 focus:ring-brand"
+        />
+        <button class="add-item-btn bg-brand text-white text-base px-6 py-[10px] rounded-xl hover:bg-brand-hover transition-colors duration-300">Adicionar item</button>
+      </div>
+
+      <ul class="item-list space-y-3">
+        <!-- Item 1 -->
+        <li class="flex items-center justify-between p-3 rounded-xl shadow-sm bg-white">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="h-4 w-4 focus:ring-0 focus:ring-brand" />
+            <span class="text-content-secondary text-base font-medium">Pão de forma</span>
+          </label>
+          <button><img src="img/trash.svg" alt="Delete item" class="cursor-pointer" /></button>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="flex items-center justify-between p-3 rounded-xl shadow-sm bg-white">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="h-4 w-4 focus:ring-0 focus:ring-brand" />
+            <span class="text-content-secondary text-base font-medium">Café preto</span>
+          </label>
+          <button><img src="img/trash.svg" alt="Delete item" class="cursor-pointer" /></button>
+        </li>
+
+        <!-- Item 3 -->
+        <li class="flex items-center justify-between p-3 rounded-xl shadow-sm bg-white">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="h-4 w-4 focus:ring-0 focus:ring-brand" />
+            <span class="text-content-secondary text-base font-medium">Suco de laranja</span>
+          </label>
+          <button><img src="img/trash.svg" alt="Delete item" class="cursor-pointer" /></button>
+        </li>
+
+
+        <!-- Item 4 -->
+        <li class="flex items-center justify-between p-3 rounded-xl shadow-sm bg-white">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="h-4 w-4 focus:ring-0 focus:ring-brand" />
+            <span class="text-content-secondary text-base font-medium">Bolacha</span>
+          </label>
+          <button><img src="img/trash.svg" alt="Delete item" class="cursor-pointer" /></button>
+        </li>
+      </ul>
+
+      <!-- Item Removido -->
+      <div class="mt-9 p-3 bg-danger text-white rounded-xl flex items-center justify-between gap-2 shadow-md hidden">
+        <div class="flex items-center gap-2">
+          <img src="/img/warning-circle.svg" alt="Warning Circle">
+          <span class="text-base font-medium">O item foi removido da lista</span>
+        </div>
+        <button><img src="/img/delete.svg" alt="Delete Icon"></button>
+      </div>
+
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
